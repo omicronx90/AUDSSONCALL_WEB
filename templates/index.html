@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDSS OnCall Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AUDSS OnCall Management</h1>
+        </header>
+
+        <main class="main-layout">
+            <section class="panel">
+                <h2>On-Call Personnel</h2>
+                <div class="user-action-container">
+                    <div class="user-list-container">
+                        <select id="user-list" size="10">
+                            </select>
+                    </div>
+                    <div class="button-group">
+                        <button id="add-btn" type="button">Add Person</button>
+                        <button id="remove-btn" type="remove-btn">Remove Person</button>
+                        <button id="update-btn" type="button">Update Mobile#</button>
+                        <button id="clear-btn" type="button">Clear Selection</button>
+                    </div>
+                </div>
+                <form id="user-form" class="form-grid">
+                    <input type="hidden" id="user-id">
+                    <input type="text" id="name-input" placeholder="Full Name" required>
+                    <input type="text" id="mobile-input" placeholder="Mobile Number (e.g. 04xxxxxxxx)" required>
+                </form>
+            </section>
+
+            <section class="panel">
+                <div class="status-container">
+                    <h2>Current SBC On-Call Numbers</h2>
+                    <div id="sbc-status-perth" class="sbc-status">
+                        <strong>Perth (pernetgw01):</strong> <span class="loading">Loading...</span>
+                    </div>
+                    <div id="sbc-status-pps" class="sbc-status">
+                        <strong>Parkeston (parnetgw01):</strong> <span class="loading">Loading...</span>
+                    </div>
+                </div>
+                <br>
+                <div class="live-actions">
+                    <h2>Update On Call Person</h2>
+                    <button id="update-oncall-btn" class="action-button">Update OnCall Now</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Schedule On-Call Personnel</h2>
+                <p>Select a user, then pick a date and time to schedule the on-call change.</p>
+                <form id="schedule-form" class="form-grid">
+                    <input type="datetime-local" id="schedule-datetime" required>
+                    <button type="submit" id="schedule-btn">Schedule Update</button>
+                </form>
+                <div class="schedule-view">
+                    <h3>Upcoming Schedules</h3>
+                    <ul id="schedule-list">
+                        </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

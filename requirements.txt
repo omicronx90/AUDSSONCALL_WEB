@@ -1,0 +1,13 @@
+pyodbc
+flask
+pandas
+requests
+pyyaml
+fernet
+dotenv
+cryptography
+python-dotenv
+xmltodict
+APScheduler
+paramiko
+urllib3
