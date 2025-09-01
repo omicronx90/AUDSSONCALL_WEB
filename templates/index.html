@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUDSS OnCall Application</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="/audssoncall/static/css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>AUDSS OnCall Management</h1>
         </header>
-
+		<script src="/audssoncall/static/js/main.js"></script>
         <main class="main-layout">
             <section class="panel">
                 <h2>On-Call Personnel</h2>
@@ -66,7 +66,5 @@
             </section>
         </main>
     </div>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
