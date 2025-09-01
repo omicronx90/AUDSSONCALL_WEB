@@ -18,6 +18,7 @@ class Config:
     def __init__(self):
         self._password = self._getpassword()
         # # Database Configuration (using pyodbc)
+        self.DB_DRIVER = config['DATABASE']['DRIVER']
         self.DB_SERVER = config['DATABASE']['SERVER']
         self.DB_NAME = config['DATABASE']['DATABASE']
         self.DB_TRUSTEDCONNECTION = config['DATABASE']['TRUSTEDCONNECTION']
@@ -80,32 +81,5 @@ class Config:
         return self._password
  
 cfg = Config() 
-   
-#SBC_PASS = cfg.password   
-# # # Database Configuration (using pyodbc)
-# DB_SERVER = config['DATABASE']['SERVER']
-# DB_NAME = config['DATABASE']['DATABASE']
-# DB_TRUSTEDCONNECTION = config['DATABASE']['TRUSTEDCONNECTION']
-
-# # # pyodbc connection string
-# # SQLALCHEMY_DATABASE_URI = (
-# #     f'mssql+pyodbc://{DB_USER}:{DB_PASS}@{DB_SERVER}/{DB_NAME}?'
-# #     'driver=ODBC+Driver+17+for+SQL+Server'
-# # )
-
-# # SBC Configuration
-
-# SBC_USER = config['SBC']['SBC_USER']
-# SBC_PASS = cfg.password
-# SBC_HOSTS = config['SBC']['SBC_HOST']
-
-# # Email Configuration
-
-# SMTP_SERVER = config['MAIL']['SMTP_SERVER']
-# SMTP_PORT = config['MAIL']['SMTP_PORT']
-# TO_PERSON = config['MAIL']['TO_PERSON']
-# FROM_PERSON = config['MAIL']['FROM_PERSON']
-# EMAIL_SUBJECT = config['MAIL']['EMAIL_SUBJECT']
-
     
 
