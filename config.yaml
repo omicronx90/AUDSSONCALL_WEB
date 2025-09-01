@@ -1,0 +1,24 @@
+MAIL:
+    SMTP_SERVER: smtp1.transalta.org
+    SMTP_PORT: 25
+<<<<<<< HEAD
+    TO_PERSON: gehan_desilva@transalta.com
+    FROM_PERSON: percts01@transalta.com
+    EMAIL_SUBJECT: GPPL Actuals Data Transformation
+=======
+    TO_PERSON: may_sullivan@transalta.com
+    FROM_PERSON: AUDSSONCALL@transalta.com
+    EMAIL_SUBJECT: "AUDSSONCALL Management Notification"
+>>>>>>> 06cdbed (Audsson Call IIS WebAPP Merge Main)
+
+DATABASE:
+    DRIVER: "{ODBC Driver 17 for SQL Server}"
+    SERVER: "persqld01.transalta.org"
+    DATABASE: "AUDSSONCALL"
+    TBLONCALLUSERS: "OnCallUsers"
+    TBLONCALLSCHEDULE: "OnCallSchedules"
+    TRUSTEDCONNECTION: "yes"
+
+SBC:
+    SBC_USER: pyreader
+    SBC_HOST: ("pernetgw01.transalta.org", "parnetgw01.transalta.org")
